@@ -1,0 +1,25 @@
+---
+title: "firstmarkdownproject"
+author: "Shinji"
+date: "11/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## This is my first project in R! Please support it, Thank y'all!
+
+```{r include=FALSE}
+source("analysis.R")
+library("knitr")
+```
+
+### According to the vehicle dataset, these were the cars that were specifically, 2 wheel drives that got more 20 miles/gallons in the city.
+
+```{r echo=FALSE}
+kable(more_than_20)
+```
+
+Also, from the dataset, the most efficient honda model in 1995 was `r efficient_honda`. 

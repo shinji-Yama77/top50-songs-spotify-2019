@@ -5,21 +5,28 @@ date: "11/7/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library("knitr")
+library("dplyr")
+library("stringr")
 ```
 
-## This is my first project in R! Please support it, Thank y'all!
+## This is my first mini project in R! Please support it, Thank y'all!
 
-```{r include=FALSE}
+```{r echo=FALSE}
 source("analysis.R")
 library("knitr")
 ```
 
-### According to the vehicle dataset, these were the cars that were specifically, 2 wheel drives that got more 20 miles/gallons in the city.
+My favorite track according to the dataset is `r favorite_track`. Also, according to the dataset, for Pop genre, the track name that had the max energy was called
+`r max_energy_poptrack`. My favorite artist in the dataset is `r most_favorite_artist`. Also, for Billie eilish's song's in the dataset, her most popular value song 
+`r Billie_most_popular_num`. For the artist that had the most top 50 tracks in Spotify for 2019, it was `r most_top50_songs_artist`. 
+
+
+### the table below shows the top three most popular songs of 2019 in spotify, rated by their popularity ratings. 
 
 ```{r echo=FALSE}
-kable(more_than_20)
+kable(top_3_popularity)
 ```
 
-Also, from the dataset, the most efficient honda model in 1995 was `r efficient_honda`. 
